@@ -1,1 +1,3 @@
-NekoRocket Web
+# NekoRocket-web
+
+https://nekorocket.space
