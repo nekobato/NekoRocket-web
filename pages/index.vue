@@ -92,4 +92,10 @@ export default {
 .links {
   padding-top: 15px;
 }
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
+}
 </style>
