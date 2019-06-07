@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div class="launcher" @click="toggleMenu">
-      <MenuImage class="launcher-image"/>
+      <MenuImage class="launcher-image" />
     </div>
     <transition name="fade">
       <ul class="contents-list" v-show="isVisible">
@@ -50,6 +50,11 @@ nav {
   width: 64px;
   height: 64px;
   text-align: right;
+  @media screen and (max-width: 1000px) {
+    top: 0;
+    left: 4px;
+    margin-left: 0;
+  }
 }
 .launcher {
   padding: 8px;
@@ -75,6 +80,11 @@ nav {
     color: hsla(0, 0, 20%, 0.6);
     font-weight: bold;
     white-space: nowrap;
+  }
+  @media screen and (max-width: 1000px) {
+    text-align: left;
+    left: 16px;
+    rigth: auto;
   }
 }
 .fade-enter-active,

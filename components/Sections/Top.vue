@@ -1,6 +1,6 @@
 <template>
   <section class="top-section">
-    <Logo class="logo"/>
+    <Logo class="logo" />
   </section>
 </template>
 <script>
@@ -25,5 +25,8 @@ $logo-height: 681px;
 .logo {
   margin: 0 auto;
   width: 500px;
+  @media screen and (max-width: 1000px) {
+    width: 80%;
+  }
 }
 </style>
