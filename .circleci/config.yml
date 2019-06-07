@@ -18,11 +18,11 @@ jobs:
           key: 'package-{{ checksum "package-lock.json" }}'
           paths:
             - node_modules
-      - run: npm run build
+      - run: npm run generate
       - persist_to_workspace:
           root: .
           paths:
-            - .nuxt
+            - dist
             - node_modules
   deploy:
     executor: default
