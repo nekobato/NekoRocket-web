@@ -1,0 +1,51 @@
+version: 2.1
+
+executors:
+  default:
+    docker:
+      - image: circleci/node:10.15.3
+
+jobs:
+  build:
+    executor: default
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          key: 'package-{{ checksum "package-lock.json" }}'
+      - run: npm i
+      - save_cache:
+          key: 'package-{{ checksum "package-lock.json" }}'
+          paths:
+            - ./node_modules
+      - run: npm run build
+      - persist_to_workspace:
+          root: ./dist
+          paths:
+            - .nuxt
+            - firebase.json
+            - .firebaserc
+  deploy:
+    executor: default
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ./dist
+      - run: npx firebase deploy --token "$firebase_token"
+
+workflows:
+  Deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - master
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
