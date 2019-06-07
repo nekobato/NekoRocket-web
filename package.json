@@ -1,8 +1,8 @@
 {
   "name": "nekorocket-web",
   "version": "1.0.0",
-  "description": "My world-class Nuxt.js project",
-  "author": "nekobato",
+  "description": "NekoRocket (ネコロケット)は地域の魅力を多言語で発信するボランティア団体です",
+  "author": "NekoRocket",
   "private": true,
   "scripts": {
     "dev": "nuxt",

@@ -1,6 +1,6 @@
 <template>
   <section class="top-section">
-    <Logo class="logo" shrink="3"/>
+    <Logo class="logo" />
   </section>
 </template>
 <script>
@@ -13,7 +13,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+$logo-width: 1500px;
+$logo-height: 681px;
+
 .top-section {
   display: flex;
   align-items: center;
@@ -21,5 +24,9 @@ export default {
 }
 .logo {
   margin: 0 auto;
+  width: 500px;
+  @media screen and (max-width: 1000px) {
+    width: 80%;
+  }
 }
 </style>
