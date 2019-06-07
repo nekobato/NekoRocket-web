@@ -20,18 +20,17 @@ jobs:
             - ./node_modules
       - run: npm run build
       - persist_to_workspace:
-          root: ./dist
+          root: .
           paths:
             - .nuxt
             - firebase.json
             - .firebaserc
   deploy:
     executor: default
-    working_directory: ~/repo
+    working_directory:
     steps:
-      - checkout
       - attach_workspace:
-          at: ./dist
+          at: .
       - run: npx firebase deploy --token "$firebase_token"
 
 workflows:
