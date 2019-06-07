@@ -17,18 +17,18 @@ jobs:
       - save_cache:
           key: 'package-{{ checksum "package-lock.json" }}'
           paths:
-            - ./node_modules
+            - node_modules
       - run: npm run build
       - persist_to_workspace:
           root: .
           paths:
             - .nuxt
-            - firebase.json
-            - .firebaserc
+            - node_modules
   deploy:
     executor: default
     working_directory:
     steps:
+      - checkout
       - attach_workspace:
           at: .
       - run: npx firebase deploy --token "$firebase_token"
