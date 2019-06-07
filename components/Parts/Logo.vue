@@ -1,5 +1,5 @@
 <template>
-  <img class="logo-image" src="~/assets/logo.png">
+  <img class="logo-image" src="~/assets/logo.png" />
 </template>
 
 <script>
@@ -12,8 +12,7 @@ $logo-width: 1500px;
 $logo-height: 681px;
 
 .logo-image {
-  width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
 }
 </style>
