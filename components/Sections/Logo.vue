@@ -6,7 +6,7 @@
         <LogoImage class="logo-image" />
       </div>
       <div class="logo-description">
-        <span class="title">「ネコロケット」に込めた想い</span>
+        <span class="title">団体名、ネコロケットに込めた想い</span>
         <p class="text">
           ネコ：
           <br />まち(地域)を歩く一個人を表します。ゆったりとマイペース。
