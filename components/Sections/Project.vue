@@ -1,6 +1,6 @@
 <template>
   <section class="project-section">
-    <SectionTitle en="Projects" ja="プロジェクト"/>
+    <SectionTitle en="Projects" ja="プロジェクト" />
     <div class="project-items">
       <ProjectItem
         class="project-item"
@@ -29,7 +29,8 @@ export default {
           label: '品川区',
           type: 'iOS, Andoroid',
           name: '(仮) 戸越公園 Language exchange 音声アプリ',
-          description: 'Coming Soon...'
+          linkUrl: 'https://nekorocket-prototype.web.app',
+          linkTitle: 'Prototype (web)'
         },
         {
           image: require('@/assets/placeholder.png'),

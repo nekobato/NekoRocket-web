@@ -1,13 +1,13 @@
 <template>
   <div class="project-item">
     <span class="label">{{ label }}</span>
-    <img class="image" :src="image">
+    <img class="image" :src="image" />
     <span class="type">{{ type }}</span>
     <span class="name">{{ name }}</span>
     <p class="description" v-show="!!description">{{ description }}</p>
     <a class="link" :href="linkUrl" target="_blank" v-show="!!linkTitle">
       {{ linkTitle }}
-      <OpenInNew class="icon-open-in-new"/>
+      <OpenInNew class="icon-open-in-new" />
     </a>
   </div>
 </template>
