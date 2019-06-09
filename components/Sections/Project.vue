@@ -29,8 +29,7 @@ export default {
           label: '品川区',
           type: 'iOS, Andoroid',
           name: '(仮) 戸越公園 Language exchange 音声アプリ',
-          linkUrl: 'https://nekorocket-prototype.web.app',
-          linkTitle: 'Prototype (web)'
+          description: 'Coming Soon...'
         },
         {
           image: require('@/assets/placeholder.png'),
